@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+       body{
     margin: 0px;
     
 }
@@ -98,7 +98,13 @@
     background-position: 0 0;
     background-attachment: fixed;
 }
+@media (max-width:1300px){
+    .navik{
+        background-attachment:unset;
+        background-position: none;
+    }
 
+}
 
 .navik1{
     width: 100%;
@@ -178,8 +184,8 @@
 }
 .port{
     width: 100%;
-    height: 800px;
-    background-image: url(фотодлясайта4.png);
+    height: 2500px;
+    background-image: url(фотодлясайта6.png);
   
 }
 .port1{
@@ -221,19 +227,58 @@
     align-items: center;
 }
 .robota{
-    width: 40%;
-    height: 200px;
-    background-color: aqua;
+    width: 80%;
+    height: 500px;
     display: flex;
+    justify-content: space-between;
+}
+.robotaa.p1{
+    background-color: blue;
+}
+.robotaa.p2{
+    background-color: blueviolet;
 }
 .div1{
     display: flex;
 }
 .robotaa{
-    width: 33.4%;
-    height: 200px;
+    width: 30%;
+    height: 100%;
     background-color: azure;
+    background-image: url(фотодлясайта.png);
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    height: calc(400px + 50*((100vw - 320px)/1600));
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: perspective(800px) rotateY(20deg);
+    transform: perspective(800px) rotateY(20deg);
+    -webkit-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+    -webkit-box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+    box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    border-top: 1px solid rgba(255,255,255,.5);    
+    border-left: 1px solid rgba(255,255,255,.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
+    -webkit-transition: 2.5s;
+    -o-transition: 2.5s;
+    transition: 1s;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
 }
+.robotaa:hover{
+    transform: translate3d(0px,5px,0px);
+}
+
 .kontact{
     width: 100%;
     height: 700px;
@@ -350,6 +395,11 @@ textarea.input{
     height: 100px;
     background-color: rgb(51,59,80);
 }
+.rr{
+    width: 100%;
+    height: 20%;
+    display: none;
+}
 @media(max-width:800px){
     .bvz3{
         font-size: 40px;
@@ -359,12 +409,14 @@ textarea.input{
     }
     .kontact1{
         width: 80%;
+        flex-direction: column;
     }
     .kontact2{
         display: none;
     }
     .kontact3{
         width: 100%;
+        height: 80%;
     }
     .portt1{
         width: 70%;
@@ -384,91 +436,114 @@ textarea.input{
         align-items: center;
         justify-content: center;
     }
+    .portt{
+        height: 2000px;
+    }
+    .robota{
+        height: 1800px;
+        flex-direction: column;
+      
+    }
+    .robotaa{
+        height: 600px;
+        width: 100%;
+        position: relative;
+        margin-top: 40px;
+    }
+    .rr{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: rgb(255,255,255);
+        font: var(--font_5);
+    }
 }
     </style>
 </head>
 <body id="top">
     
-        <div class="image">
-            <div class="punkt">
-                <a href="#top" class="text b1">ГЛАВНАЯ</a>
-                <a href="#naviik" class="text">НАВЫКИ</a>
-                <a href="#port" class="text">ПОРТФОЛИО</a>
-                <a href="#kontact" class="text">КОНТАКТЫ</a>
+    <div class="image">
+        <div class="punkt">
+            <a href="#top" class="text b1">ГЛАВНАЯ</a>
+            <a href="#naviik" class="text">НАВЫКИ</a>
+            <a href="#port" class="text">ПОРТФОЛИО</a>
+            <a href="#kontact" class="text">КОНТАКТЫ</a>
+        </div>
+        <div class="bvz">
+            <div class="bvz1">
+                    <div class="bvz3 _anim-items">NURASYL</div>
+                    <div class="bvz4 _anim-items">ПРОГРАММИСТ</div>
             </div>
-            <div class="bvz">
-                <div class="bvz1">
-                        <div class="bvz3 _anim-items">NURASYL</div>
-                        <div class="bvz4 _anim-items">ПРОГРАММИСТ</div>
+        </div>
+    </div>
+    <div class="navik" id="naviik">
+        <div class="navik1">
+            <div class="navik3">
+                <div>
+                    <span class="navik5" >01</span>
+                    <span class="navik2" >НАВЫКИ</span>
+                </div>
+                <div class="navik4">УРОВЕНЬ ВЛАДЕНИЯ ПРОГРАММАМИ</div>
+                <div class="qq">
+                    <span class="t2 f">JAVASCRIPT</span>
+                    <div class="t1"></div>
+                    <span class="t3 f">50%</span>
+                </div>
+                <div class="qq_1">
+                    <span class="t2_2 f">HTML & CSS</span>
+                    <div class="t1_1"></div>
+                    <span class="t3_3 f">70%</span>
                 </div>
             </div>
         </div>
-        <div class="navik" id="naviik">
-            <div class="navik1">
-                <div class="navik3">
-                    <div>
-                        <span class="navik5" >01</span>
-                        <span class="navik2" >НАВЫКИ</span>
-                    </div>
-                    <div class="navik4">УРОВЕНЬ ВЛАДЕНИЯ ПРОГРАММАМИ</div>
-                    <div class="qq">
-                        <span class="t2 f">JAVASCRIPT</span>
-                        <div class="t1"></div>
-                        <span class="t3 f">50%</span>
-                    </div>
-                    <div class="qq_1">
-                        <span class="t2_2 f">HTML & CSS</span>
-                        <div class="t1_1"></div>
-                        <span class="t3_3 f">70%</span>
-                    </div>
+    </div>
+
+<div class="port" id="port">
+    <div class="portt">
+        <div class="portt1">
+            <div class="div1">
+                <span class="port1" >02</span>
+                <span class="port2" >ПОРТФОЛИО</span>
+            </div>
+            <div class="port3">СВЕЖИЕ РАБОТЫ.</div>
+        </div>
+        <div class="robota">
+            <div class="robotaa p1"></div>
+            <div class="robotaa p2"></div>
+            <div class="robotaa p3"></div>
+        </div>
+    </div>       
+</div>
+<div class="kontact" id="kontact">
+    <div class="kontact1">
+        <div class="kontact2">
+            <div class="kontactt">СВЯЖИТЕСЬ СО МНОЙ</div>
+            <div class="kontactt1">muratnurasyl01@gmail.com</div>
+        </div>
+        <div class="rr">СВЯЖИТЕСЬ СО МНОЙ</div>
+        <div class="kontact3">
+            <div class="kontacttt">
+                <div class="butt1">
+                  <input type="text" placeholder="Имя" required class="inputt"> 
+                  <input type="email" placeholder="Эл.почта" required class="inputt"> 
+                </div>
+                <div class="butt">
+                    <input type="tel" placeholder="Телефон" required class="input">
+                </div>
+                <div class="butt">
+                    <textarea name="message" id="" class="input"></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit" class="buttonn">Отправить</button>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="acti">
     
-    <div class="port" id="port">
-        <div class="portt">
-            <div class="portt1">
-                <div class="div1">
-                    <span class="port1" >02</span>
-                    <span class="port2" >ПОРТФОЛИО</span>
-                </div>
-                <div class="port3">СВЕЖИЕ РАБОТЫ.</div>
-            </div>
-            <div class="robota">
-                <div class="robotaa"></div>
-                <div class="robotaa"></div>
-                <div class="robotaa"></div>
-            </div>
-        </div>       
-    </div>
-    <div class="kontact" id="kontact">
-        <div class="kontact1">
-            <div class="kontact2">
-                <div class="kontactt">СВЯЖИТЕСЬ СО МНОЙ</div>
-                <div class="kontactt1">muratnurasyl01@gmail.com</div>
-            </div>
-            <div class="kontact3">
-                <div class="kontacttt">
-                    <div class="butt1">
-                      <input type="text" placeholder="Имя" required class="inputt"> 
-                      <input type="email" placeholder="Эл.почта" required class="inputt"> 
-                    </div>
-                    <div class="butt">
-                        <input type="tel" placeholder="Телефон" required class="input">
-                    </div>
-                    <div class="butt">
-                        <textarea name="message" id="" class="input"></textarea>
-                    </div>
-                    <div class="button">
-                        <button type="submit" class="buttonn">Отправить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="acti">
-        
-    </div>
+</div>
   <script>
       const anchors = document.querySelectorAll('a[href*="#"]')
 
